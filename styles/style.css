@@ -17,4 +17,146 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font),sans-serif;
+  font-variation-settings: 'wght' var(--main-font-weight);
+  font-size: 18px;
+  color: var(--main-text-color);
+  background-color: var(--bg-color);
+  background-image: repeating-linear-gradient(
+      90deg, 
+      var(--color-light-theme-line), 
+      var(--color-light-theme-line) 2px, 
+      transparent 2px, 
+      transparent 4px
+    ), 
+
+    /* Второй градиент для полос сверху вниз */
+    repeating-linear-gradient(
+      0deg, 
+      var(--color-light-theme-line), 
+      var(--color-light-theme-line) 2px, 
+      transparent 2px, 
+      transparent 4px
+    ),
+
+    /* Третий градиент для изменения насыщенности цвета */
+    linear-gradient(
+      to bottom, 
+      var(--color-light-gradient-start) 0.01%, 
+      var(--color-light-gradient-end)
+    );
+
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--accent-font);
+  font-weight: var(--main-font-weight);
+  text-transform: uppercase;
+  background-color: var(--bg-color);
+  padding-block-start: clamp(120px, 7.1479rem + 1.5023vw,136px);
+  padding-block-end: 25px;
+  margin-block: 100px;
+  border: 1px solid var(--main-text-color);
+  margin-inline: clamp(0px, -8.1426rem + 34.7418vw, 370px);
+}
+
+.header__title {
+  font-size: clamp(49px, 2.7104rem + 1.5023vw, 65px);
+  line-height: clamp(49px, 2.7104rem + 1.5023vw, 65px);
+  font-weight: var(--main-font-weight);
+  margin-block-end: 20px;
+  
+}
+
+.header__paragraph {
+  font-size: clamp(14px, 0.6769rem + 0.8451vw, 23px);
+  line-height: clamp(14px, 0.6769rem + 0.8451vw, 23px);
+  margin-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  line-height: 14px;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  padding-left: 1.5em;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before  {
+  content: '▶'; 
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  animation: arrowMove 0.5s ease-in-out infinite alternate;
+  
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(4px);
+  }
+}
+
+.theme-menu__button:focus {
+  outline: none; /* Убираем стандартную обводку */
+  opacity: 0.6;
+}
+
+/* Псевдоэлемент для подчеркивания при фокусе */
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  left: 1.5em;
+  bottom: -4px;
+  display: inline-block;
+  width: calc(100% - 1.5em);
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  outline: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
