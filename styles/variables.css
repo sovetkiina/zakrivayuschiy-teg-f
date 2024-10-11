@@ -1,15 +1,19 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  --content-max-width: 1440px;
   --main-font: 'Inter-Variable';
   --accent-font: 'Press Start 2P';
   --main-font-weight: 400;
   --accent-font-weight: 700;
   --main-text-color: #000;
+  --btn-text-color:  #FFF;
   --bg-color: #FFF;
+  --hover-text-color:#FFF;
   --color-light-theme-line: #d3d3d3;
   --color-dark-theme-line: #000;
   --color-light-gradient-start: #e7e7e7;
   --color-light-gradient-end: #1a1a1a;
   --color-dark-gradient-start: #007f0c;
   --color-dark-gradient-end: #004306;
+  --spark-color: #FF0000;
 }

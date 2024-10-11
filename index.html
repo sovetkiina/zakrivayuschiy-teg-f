@@ -2,10 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -47,7 +48,75 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="content">
+
+
+      <section class="content__card">
+        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <div class="picture">
+          <img src="./images/picture-2.png" alt="" width="371" height="371" loading="lazy" class="content__card-image">
+        </div>
+        <div class="content__text">
+          <p class="content__paragraph">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+          <p class="content__paragraph">В начале пути я не знала, что меня ждет,  но была полна решимости двигаться вперед.</p>
+        </div>
+        <div class="card__like-container">
+        <button class="card__icon-button" type="button" aria-label="Отметить как понравившееся">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg"  width="39" height="34" fill="none">
+            <g clip-path="url(#a)">
+              <g class="heart">
+            <path class="contour" fill="var(--main-text-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
+            
+            <path class="main-body" fill="none" d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"/>
+            
+            <path class="core" fill="none" d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z"/>
+            
+            <path class="sparks" fill="var(--spark-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
+            </g>
+            </g><defs><clipPath id="a"><path fill="#fff" d="M0 0h39v36H0z"/></clipPath></defs></svg>
+          </button>
+        <button class="content__button  card__like-button" type="button" aria-label="Отметить как понравившееся">
+                
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+      </section>
+
+    </main>
     <script src="./scripts/like.js"></script>
+    <footer class="footer"> /напиши для скринеридеров для кнопок других
+      <button 
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+        aria-labelledby="save"
+        class="content__button content__button-save"
+      >
+      <svg class="icon" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+        <use href="./svg/diskette.svg#icon-diskette" aria-hidden="true"></use>
+      </svg>
+        <span class="button__text" id="save">Сохранить на память</span>
+      </button>
+
+      <dialog id="dialog-id" aria-labelledby="dialog-name">
+        <div class="dialog-content">
+          <div class="diskette-container">
+            <svg class="icon-dialog" aria-hidden="true">
+              <use href="./svg/diskette.svg#icon-diskette" />
+            </svg>
+              <h3 class="diskette-text" id="dialog-name">Вставьте дискету,&nbsp;чтобы продолжить</h3>
+          </div>
+          <form method="dialog">
+            <button class="close-button content__button" type="submit" aria-label="Закрыть диалог">
+              <span class="button__text">ок</span>
+            </button>
+          </form>
+
+        </div>
+      </dialog>
+    </footer>
+
+    
   </body>
 </html>
+
