@@ -13,90 +13,91 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-  .like-icon:hover .core {
-    fill: var(--main-text-color);
-    transition: fill 0.3s ease; 
+.like-icon:hover .core {
+  fill: var(--main-text-color);
+  transition: fill 0.3s ease;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--main-text-color);
+  transition: fill 0.3s ease 0.05s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s ease 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card__icon-button:active .like-icon .main-body {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s ease 0.05s; /* Задержка для основного тела */
+}
+
+.card__icon-button:active .like-icon .core {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s ease; /* Задержка для сердцевины */
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
   }
-  
-  .like-icon:hover .main-body {
-    fill: var(--main-text-color);
-    transition: fill 0.3s ease 0.05s;
+  50% {
+    transform: scale(1.1);
   }
-  
-  .core {
-    fill: transparent;
-    transition: fill 0.3s ease 0.03s;
+  100% {
+    transform: scale(1);
   }
-  
-  .main-body {
-    fill: transparent;
-    transition: fill 0.3s ease;
+}
+
+/* Анимация для искр */
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0; /* Скрыто в начале и конце */
   }
-  
-  .sparks {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  50% {
+    opacity: 1; /* Видимо в середине */
   }
-  .card__icon-button:active .like-icon .main-body {
-    fill: red;
-    transition: fill 0.3s ease 0.05s; /* Задержка для основного тела */
-  }
-  
-  .card__icon-button:active .like-icon .core {
-    fill: red;
-    transition: fill 0.3s ease; /* Задержка для сердцевины */
-  }
-  
-  @keyframes scale-heart {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-  }
-  
-  /* Анимация для искр */
-  @keyframes sparkle {
-    0%, 100% {
-        opacity: 0; /* Скрыто в начале и конце */
-    }
-    50% {
-        opacity: 1; /* Видимо в середине */
-    }
-  }
-  
-  /* Стили для liked состояния */
-  .like-icon.is-liked .core {
-    fill: red; /* Цвет сердцевины при лайке */
-    transition: fill 0.3s ease;
-  }
-  
-  .like-icon.is-liked .main-body {
-    fill: red; /* Цвет основного тела при лайке */
-    transition: fill 0.3s ease 0.06s; /* Задержка */
-  }
-  
-  .like-icon.is-liked .contour {
-    fill: red; /* Цвет контура при лайке */
-    transition: fill 0.1s linear; /* Задержка */
-  }
-  
-  /* Анимация при лайке */
-  .like-icon.is-liked {
-    animation: scale-heart 0.5s forwards;
-  }
-  
-  /* Анимация искр */
-  .like-icon.is-liked .sparks {
-    animation: sparkle 0.3s ease-in forwards; /* Искры */
-    opacity: 1; /* Делаем видимыми */
-  }
-  
-  .like-icon:not(.is-liked) .contour {
-    fill: var(--main-text-color); /* Цвет контура по умолчанию */
-    transition: fill 0.1s linear; /* Быстрое возвращение цвета */
-  }
+}
+
+/* Стили для liked состояния */
+.like-icon.is-liked .core {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-body-heart-animation); /* Цвет основного тела при лайке */
+  transition: fill 0.3s ease 0.06s; /* Задержка */
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-body-heart-animation); /* Цвет контура при лайке */
+  transition: fill 0.1s linear; /* Задержка */
+}
+
+/* Анимация при лайке */
+.like-icon.is-liked {
+  animation: scale-heart 0.5s forwards;
+}
+
+/* Анимация искр */
+.like-icon.is-liked .sparks {
+  animation: sparkle 0.3s ease-in forwards; /* Искры */
+  opacity: 1; /* Делаем видимыми */
+}
+
+.like-icon:not(.is-liked) .contour {
+  fill: var(--main-text-color); /* Цвет контура по умолчанию */
+  transition: fill 0.1s linear; /* Быстрое возвращение цвета */
+}
