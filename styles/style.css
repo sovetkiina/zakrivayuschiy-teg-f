@@ -250,12 +250,17 @@
   line-height: 14px;
   text-align: left;
   color: var(--main-text-color);
-  -webkit-text-stroke: 1px var(--bg-color);
-  text-stroke: 1px var(--bg-color);
   top: 0;
   right: 0;
   padding-block-start: 25px;
   padding-inline-end: 13px;
+}
+
+@supports ((-webkit-text-stroke: 1px var(--bg-color)) or (text-stroke: 1px var(--bg-color))) {
+  .emblem {
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
+  }
 }
 
 .content__button {
