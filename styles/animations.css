@@ -37,14 +37,15 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .card__icon-button:active .like-icon .main-body {
   fill: var(--color-body-heart-animation);
-  transition: fill 0.3s ease 0.05s; /* Задержка для основного тела */
+  transition: fill 0.3s ease 0.05s;
 }
 
 .card__icon-button:active .like-icon .core {
   fill: var(--color-body-heart-animation);
-  transition: fill 0.3s ease; /* Задержка для сердцевины */
+  transition: fill 0.3s ease;
 }
 
 @keyframes scale-heart {
@@ -59,45 +60,41 @@
   }
 }
 
-/* Анимация для искр */
 @keyframes sparkle {
   0%,
   100% {
-    opacity: 0; /* Скрыто в начале и конце */
+    opacity: 0;
   }
   50% {
-    opacity: 1; /* Видимо в середине */
+    opacity: 1;
   }
 }
 
-/* Стили для liked состояния */
 .like-icon.is-liked .core {
   fill: var(--color-body-heart-animation);
   transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--color-body-heart-animation); /* Цвет основного тела при лайке */
-  transition: fill 0.3s ease 0.06s; /* Задержка */
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s ease 0.06s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--color-body-heart-animation); /* Цвет контура при лайке */
-  transition: fill 0.1s linear; /* Задержка */
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.1s linear;
 }
 
-/* Анимация при лайке */
 .like-icon.is-liked {
   animation: scale-heart 0.5s forwards;
 }
 
-/* Анимация искр */
 .like-icon.is-liked .sparks {
-  animation: sparkle 0.3s ease-in forwards; /* Искры */
-  opacity: 1; /* Делаем видимыми */
+  animation: sparkle 0.3s ease-in forwards;
+  opacity: 1;
 }
 
 .like-icon:not(.is-liked) .contour {
-  fill: var(--main-text-color); /* Цвет контура по умолчанию */
-  transition: fill 0.1s linear; /* Быстрое возвращение цвета */
+  fill: var(--main-text-color);
+  transition: fill 0.1s linear;
 }

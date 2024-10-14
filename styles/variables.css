@@ -8,12 +8,9 @@
   --btn-text-color: #fff;
   --bg-color: #fff;
   --hover-text-color: #fff;
-  --color-light-theme-line: #d3d3d3;
-  --color-dark-theme-line: #000;
-  --color-light-gradient-start: #e7e7e7;
-  --color-light-gradient-end: #1a1a1a;
-  --color-dark-gradient-start: #007f0c;
-  --color-dark-gradient-end: #004306;
+  --line-color: #d3d3d3;
+  --color-gradient-start: #e7e7e7;
+  --color-gradient-end: #1a1a1a;
   --spark-color: #ff0000;
   --color-body-heart-animation: #ff0000;
 }
