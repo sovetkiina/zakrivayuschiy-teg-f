@@ -5,8 +5,8 @@
     local('Inter-Variable'),
     local('Inter Variable'),
     local('InterVariable'),
-    url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
-    url('../fonts/Inter-Variable.woff2') format('woff2-variations');
+    url('Inter-Variable.woff2') format('woff2 supports variations'),
+    url('Inter-Variable.woff2') format('woff2-variations');
   font-display: swap;
   font-weight: 400 785;
 }
@@ -18,7 +18,7 @@
       local('PressStart2P'),
       local('Press-Start-2P'),
       local('Press Start 2P Regular'),
-      url('../fonts/PressStart2P-Regular.woff') format('woff');
+      url('PressStart2P-Regular.woff') format('woff');
       font-display: swap;
       font-weight: 400;
   }
