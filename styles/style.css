@@ -414,6 +414,7 @@ dialog::backdrop {
   .content__button-save {
     flex-direction: row;
     white-space: nowrap;
+    margin-block-end: 103px;
   }
 
   .card__title {
@@ -436,10 +437,6 @@ dialog::backdrop {
 
   .close-button {
     width: 293px;
-  }
-
-  .content__button-save {
-    margin-block-end: 103px;
   }
 }
 
